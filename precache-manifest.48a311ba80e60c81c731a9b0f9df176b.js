@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "9fd957c805b3a5ee67ded2ce4c000a4d",
+    "revision": "8a69e4eae72f5b0eb78c50d847757571",
     "url": "https://jvas28.github.io/covid19-dashboard/index.html"
   },
   {
-    "revision": "292774161ec4b4555ec3",
+    "revision": "e29a2f30243aa7dfd08a",
     "url": "https://jvas28.github.io/covid19-dashboard/static/css/main.ebcb403f.chunk.css"
   },
   {
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "https://jvas28.github.io/covid19-dashboard/static/js/2.0eb04e4b.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "292774161ec4b4555ec3",
-    "url": "https://jvas28.github.io/covid19-dashboard/static/js/main.d0ed5dbf.chunk.js"
+    "revision": "e29a2f30243aa7dfd08a",
+    "url": "https://jvas28.github.io/covid19-dashboard/static/js/main.62d95554.chunk.js"
   },
   {
     "revision": "4c14191c5f30095d5849",
