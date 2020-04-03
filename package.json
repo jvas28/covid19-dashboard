@@ -1,6 +1,6 @@
 {
   "name": "covid19-dashboard",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "private": false,
   "dependencies": {
     "@babel/core": "7.9.0",
