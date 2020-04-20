@@ -37,7 +37,9 @@ const CountryItem = ({
     flex flex-col bg-gray-100 ${selected === name ? "wide" : ""}`}
       >
         <div
-          className="flex flex-row items-center justify-between"
+          className={`flex items-center justify-between ${
+            filter !== "cases" ? "flex-col" : "flex-row"
+          }`}
           onClick={() =>
             selected === name ? setSelected(null) : setSelected(name)
           }
