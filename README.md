@@ -1,4 +1,5 @@
 # COVID 19 Dashboard
+
 Visualize latest coronavirus information with some filters and history data.
 
 `Love + ReactJS + Tailwind + Echarts - Time (So, please be nice) = This project`
@@ -7,9 +8,10 @@ Feel free to clone, fork, and do wathever with this code.
 
 ## Where's the data coming from?
 
-https://rapidapi.com/astsiatsko/api/coronavirus-monitor
+https://github.com/pomber/covid19
 
 ## Before start
+
 Don't forget to get your `API_KEY` and `API_HOST` in order to be able to connect to API and then place them in `.env` file.
 
 ## Available Scripts
