@@ -1,4 +1,3 @@
-import client from "./client";
 import axios from "axios";
 import namesMap from "./data/names.map";
 const inMap = Object.keys(namesMap);
@@ -30,6 +29,7 @@ export const getGlobalStats = () => {
         r.cases += last.confirmed;
         r.deaths += last.deaths;
         r.recovered += last.recovered;
+        return null;
       });
       return r;
     });
@@ -49,6 +49,7 @@ export const getCountryHistory = (n) => {
         if (country === name) {
           r = series;
         }
+        return null;
       });
       return r;
     });
