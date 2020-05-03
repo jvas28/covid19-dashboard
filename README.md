@@ -22,10 +22,6 @@ Feel free to clone, fork, and do wathever with this code.
 
 https://github.com/pomber/covid19
 
-## Before start
-
-Don't forget to get your `API_KEY` and `API_HOST` in order to be able to connect to API and then place them in `.env` file.
-
 ## Available Scripts
 
 In the project directory, you can run:
