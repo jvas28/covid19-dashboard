@@ -1,22 +1,26 @@
 {
   "files": {
-    "main.css": "https://jvas28.github.io/covid19-dashboard/static/css/main.ebcb403f.chunk.css",
-    "main.js": "https://jvas28.github.io/covid19-dashboard/static/js/main.48ec1f9e.chunk.js",
-    "main.js.map": "https://jvas28.github.io/covid19-dashboard/static/js/main.48ec1f9e.chunk.js.map",
+    "main.css": "https://jvas28.github.io/covid19-dashboard/static/css/main.3ced1be6.chunk.css",
+    "main.js": "https://jvas28.github.io/covid19-dashboard/static/js/main.10e5803e.chunk.js",
+    "main.js.map": "https://jvas28.github.io/covid19-dashboard/static/js/main.10e5803e.chunk.js.map",
     "runtime-main.js": "https://jvas28.github.io/covid19-dashboard/static/js/runtime-main.4827b400.js",
     "runtime-main.js.map": "https://jvas28.github.io/covid19-dashboard/static/js/runtime-main.4827b400.js.map",
-    "static/js/2.c8ea7464.chunk.js": "https://jvas28.github.io/covid19-dashboard/static/js/2.c8ea7464.chunk.js",
-    "static/js/2.c8ea7464.chunk.js.map": "https://jvas28.github.io/covid19-dashboard/static/js/2.c8ea7464.chunk.js.map",
+    "static/css/2.14d3bbd4.chunk.css": "https://jvas28.github.io/covid19-dashboard/static/css/2.14d3bbd4.chunk.css",
+    "static/js/2.ed34cf84.chunk.js": "https://jvas28.github.io/covid19-dashboard/static/js/2.ed34cf84.chunk.js",
+    "static/js/2.ed34cf84.chunk.js.map": "https://jvas28.github.io/covid19-dashboard/static/js/2.ed34cf84.chunk.js.map",
     "index.html": "https://jvas28.github.io/covid19-dashboard/index.html",
-    "precache-manifest.29df62f91d1949499f4c4a5bdeec24c7.js": "https://jvas28.github.io/covid19-dashboard/precache-manifest.29df62f91d1949499f4c4a5bdeec24c7.js",
+    "precache-manifest.ab3473e6236779dd8ef0c4d4252ee7d6.js": "https://jvas28.github.io/covid19-dashboard/precache-manifest.ab3473e6236779dd8ef0c4d4252ee7d6.js",
     "service-worker.js": "https://jvas28.github.io/covid19-dashboard/service-worker.js",
-    "static/css/main.ebcb403f.chunk.css.map": "https://jvas28.github.io/covid19-dashboard/static/css/main.ebcb403f.chunk.css.map",
-    "static/js/2.c8ea7464.chunk.js.LICENSE.txt": "https://jvas28.github.io/covid19-dashboard/static/js/2.c8ea7464.chunk.js.LICENSE.txt"
+    "static/css/2.14d3bbd4.chunk.css.map": "https://jvas28.github.io/covid19-dashboard/static/css/2.14d3bbd4.chunk.css.map",
+    "static/css/main.3ced1be6.chunk.css.map": "https://jvas28.github.io/covid19-dashboard/static/css/main.3ced1be6.chunk.css.map",
+    "static/js/2.ed34cf84.chunk.js.LICENSE.txt": "https://jvas28.github.io/covid19-dashboard/static/js/2.ed34cf84.chunk.js.LICENSE.txt",
+    "static/media/logo.svg": "https://jvas28.github.io/covid19-dashboard/static/media/logo.65ea3200.svg"
   },
   "entrypoints": [
     "static/js/runtime-main.4827b400.js",
-    "static/js/2.c8ea7464.chunk.js",
-    "static/css/main.ebcb403f.chunk.css",
-    "static/js/main.48ec1f9e.chunk.js"
+    "static/css/2.14d3bbd4.chunk.css",
+    "static/js/2.ed34cf84.chunk.js",
+    "static/css/main.3ced1be6.chunk.css",
+    "static/js/main.10e5803e.chunk.js"
   ]
 }
