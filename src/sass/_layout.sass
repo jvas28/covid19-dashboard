@@ -1,0 +1,25 @@
+textarea, select, input, button
+  outline: none
+
+.App
+  .main-wrapper
+    @apply flex flex-col w-full bg-gray-200
+  #details-wrapper
+    height: calc(100vh - 48px)
+    @apply absolute w-full
+    .map-wrapper
+      @apply h-full overflow-hidden flex flex-col
+      .map-card
+        @apply w-full
+@screen md
+  .App
+    .main-wrapper
+      @apply flex-row w-full
+    #details-wrapper
+      min-height: 400px
+      height: 50vh
+      @apply relative visible w-full pt-3
+    .map-wrapper
+      @apply px-2
+      .map-card
+        @apply rounded shadow overflow-hidden w-full h-full

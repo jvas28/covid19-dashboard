@@ -1,0 +1,51 @@
+.country-list-item
+  min-width: 300px
+  @apply mb-2
+  .card
+    transition: transform 200ms, height 1s
+    height: 125px
+    &.wide
+      background: white
+      height: 250px !important
+      @screen md
+        bottom: 10px
+        right: 10px
+        top: unset
+        left: unset
+        height: 125px !important
+        @apply bg-blue-700 text-white
+    @apply flex flex-col flex-wrap bg-white cursor-pointer rounded-lg  border border-gray-100 shadow-lg p-4 overflow-hidden
+    &:hover
+      transform: scale(1.03)
+    .content
+      @apply flex flex-col h-full justify-between
+      .headline
+        @apply flex w-full items-center justify-between
+        .left
+          @apply flex flex-row items-center
+          .icon
+            width: 35px
+            height: 35px
+            @apply mr-2 bg-gray-400 rounded-full p-2
+          .title
+            @apply text-base
+        .right
+          @apply items-center rounded-full text-white text-sm p-1
+          &.mobile
+            @apply flex bg-gray-300
+            @screen md
+              @apply hidden
+          &.desktop
+            @apply hidden
+            @screen md
+              @apply flex bg-gray-300
+          &.selected
+            @apply bg-green-500
+    .numbers
+      @apply flex flex-row w-full justify-between
+      .item
+        @apply text-center
+        span.title
+          @apply text-gray-500 text-sm
+        p.value
+          @apply font-bold

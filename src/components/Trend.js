@@ -16,5 +16,5 @@ export default function Trend({ data = [] }) {
       instance.setOption(options);
     }
   }, [data, el]);
-  return <div style={{ width: "100%", height: "250px" }} ref={el}></div>;
+  return <div style={{ width: "100%", height: "100%" }} ref={el}></div>;
 }
