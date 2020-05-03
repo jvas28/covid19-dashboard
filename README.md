@@ -1,8 +1,8 @@
-<p style="text-align:center">
+# COVID 19 Dashboard
+
+<p align="center">
 <img src="./public/logo192.png" width="150" />
 </p>
-
-# COVID 19 Dashboard
 
 Visualize latest coronavirus information with some filters and history data.
 
@@ -10,13 +10,14 @@ Visualize latest coronavirus information with some filters and history data.
 
 Feel free to clone, fork, and do wathever with this code.
 
-<p style="text-align:center">
+<p align="center">
 <img src="./recording/desktop.gif"  />
 </p>
 
-<p style="text-align:center">
+<p align="center">
 <img src="./recording/mobile.gif" width="300"  />
 </p>
+
 ## Where's the data coming from?
 
 https://github.com/pomber/covid19
