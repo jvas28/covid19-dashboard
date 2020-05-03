@@ -42,7 +42,7 @@ export default function CountryList({ data, setSelected, selected }) {
 
   return (
     <>
-      <div className="w-full">
+      <div className="w-full p-3">
         <FilterBar
           selected={filter}
           onTextChange={setSearch}
@@ -51,7 +51,7 @@ export default function CountryList({ data, setSelected, selected }) {
         />
       </div>
 
-      <div className="flex flex-col w-full flex-grow-0">
+      <div id="country-list">
         {countryData
           .filter(({ name }) =>
             name.toLowerCase().includes(search.toLowerCase())

@@ -1,16 +1,26 @@
 #stats-bar
   transition: width 1s
-  @apply flex flex-col bg-white
+  @apply z-10 overflow-hidden
   &.show
     @apply w-full
   &.hide
-    @apply w-0 overflow-hidden
-
+    @apply w-0
+  #global-stats-card
+    @apply visible mt-2
+  #country-list
+    scrollbar-width: none
+    -ms-overflow-style: none
+    overflow-y: scroll
+    overflow-x: hidden
+    &::-webkit-scrollbar
+      display: none
+    @apply flex flex-col w-full flex-grow-0 px-3 h-full overflow-y-scroll
 @screen md
   #stats-bar
     transition: width 1s
-    @apply z-10
+    min-width: 320px
+    @apply overflow-hidden
     &.show
-      width: 400px
-    &.hide
-      @apply w-0 overflow-hidden
+      @apply w-1/4 bg-gray-200
+    #global-stats-card
+      @apply hidden

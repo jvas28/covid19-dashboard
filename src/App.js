@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { getCoordinates } from "./services/geolocation";
 import { casesByCountry, getGlobalStats } from "./services/api";
 import "./App.sass";
-import Map from "./components/Map";
+import Content from "./components/Content";
 import StatsBar from "./components/StatsBar";
 import TopBar from "./components/TopBar";
 function App() {
@@ -35,7 +35,7 @@ function App() {
   return (
     <div className="App">
       <TopBar showSideBar={showSideBar} setShowSideBar={setShowSideBar} />
-      <div className={`flex flex-row w-screen bg-gray-300 h-screen`}>
+      <div className={`main-wrapper`} style={{ height: "calc(100vh - 48px)" }}>
         <StatsBar
           selected={selected}
           showSideBar={showSideBar}
@@ -43,9 +43,7 @@ function App() {
           globalStats={globalStats}
           statsByCountry={data}
         />
-        <div className="w-screen h-screen">
-          <Map data={data} coordinates={coordinates} selected={selected} />
-        </div>
+        <Content data={data} coordinates={coordinates} selected={selected} />
       </div>
     </div>
   );

@@ -2,7 +2,7 @@ import React from "react";
 import Card from "./Card";
 import ToggleCard from "./ToggleCard";
 import CountryList from "./CountryList";
-import { FaCross, FaHospital, FaMapMarkerAlt } from "react-icons/fa";
+import { FaCross, FaHospital } from "react-icons/fa";
 import { GiHealing, GiWorld } from "react-icons/gi";
 export default function StatsBar({
   globalStats,
@@ -14,6 +14,7 @@ export default function StatsBar({
   return (
     <div id="stats-bar" className={` ${showSideBar ? "show" : "hide"}`}>
       <ToggleCard
+        id="global-stats-card"
         title="Global Stats"
         Icon={GiWorld}
         onToggle={() => alert("")}
@@ -44,18 +45,11 @@ export default function StatsBar({
           />
         </div>
       </ToggleCard>
-      <ToggleCard
-        title="Stats by country"
-        Icon={FaMapMarkerAlt}
-        onToggle={() => alert("")}
-        open={true}
-      >
-        <CountryList
-          data={statsByCountry}
-          setSelected={setSelected}
-          selected={selected}
-        />
-      </ToggleCard>
+      <CountryList
+        data={statsByCountry}
+        setSelected={setSelected}
+        selected={selected}
+      />
     </div>
   );
 }

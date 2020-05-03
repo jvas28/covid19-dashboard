@@ -1,5 +1,10 @@
 import { getFlagUrl } from "./countries";
-export const mapOptions = (coordinates = null, rawData, geoCoordMap) => {
+export const mapOptions = (
+  coordinates = null,
+  rawData,
+  geoCoordMap,
+  selected
+) => {
   var mapData = [];
   rawData.forEach((item) => {
     const geoCoord = geoCoordMap[item[0]];
@@ -11,7 +16,7 @@ export const mapOptions = (coordinates = null, rawData, geoCoordMap) => {
     }
   });
   return {
-    backgroundColor: "#e2e8f0",
+    backgroundColor: "white",
     tooltip: {
       trigger: "item",
     },
@@ -24,7 +29,7 @@ export const mapOptions = (coordinates = null, rawData, geoCoordMap) => {
       center: coordinates ?? [],
       scaleLimit: {
         min: 1,
-        max: 10,
+        max: 30,
       },
       zlevel: 0,
       emphasis: {
@@ -81,8 +86,13 @@ export const mapOptions = (coordinates = null, rawData, geoCoordMap) => {
           return Math.sqrt(parseInt(data[2])) / 4;
         },
         itemStyle: {
-          color: "rgba(244, 67, 54, 0.54)",
-          borderColor: "red",
+          color: (item) => {
+            if (item.data.name !== selected) {
+              return "rgba(244, 67, 54, 0.54)";
+            } else {
+              return "rgba(50, 20, 210, 0.54)";
+            }
+          },
         },
       },
     ],
@@ -94,14 +104,32 @@ export const trendOptions = (echarts, rawData) => {
     deaths = [],
     recovered = [],
     dates = [];
+  let firstCasePassed = false;
+  rawData = rawData.filter(({ confirmed }) => {
+    if (confirmed > 0) {
+      firstCasePassed = true;
+    }
+    if (!firstCasePassed) {
+      return false;
+    }
+    return true;
+  });
   rawData.forEach((item) => {
     let { confirmed: c, deaths: d, recovered: r, date: dt } = item;
-    dates.push(new Date(dt));
+    dates.push(dt);
     recovered.push(r);
     cases.push(c);
     deaths.push(d);
   });
   return {
+    title: {
+      text: "Daily updates",
+      show: true,
+      textStyle: {
+        fontSize: 10,
+        color: "#CCC",
+      },
+    },
     tooltip: {
       trigger: "axis",
       axisPointer: {
@@ -113,9 +141,9 @@ export const trendOptions = (echarts, rawData) => {
     },
     grid: {
       backgroundColor: "transparent",
-      top: 0,
+      top: 25,
       bottom: 10,
-      left: 20,
+      left: 40,
       right: 20,
     },
     xAxis: [
@@ -129,12 +157,23 @@ export const trendOptions = (echarts, rawData) => {
     yAxis: [
       {
         type: "value",
-        show: false,
+        axisLabel: {
+          fontStyle: "lighter",
+          formatter(value, b) {
+            if (value < 999) {
+              return value;
+            }
+            if (value < 99999) {
+              return `${parseInt(value / 1000)} k`;
+            }
+            return `${(value / 1000000).toFixed(1)} M`;
+          },
+        },
       },
     ],
     series: [
       {
-        name: "Cases",
+        name: "New Cases",
         type: "line",
         smooth: true,
         label: {
@@ -150,7 +189,7 @@ export const trendOptions = (echarts, rawData) => {
         data: cases,
       },
       {
-        name: "Deaths",
+        name: "New Deaths",
         type: "line",
         smooth: true,
         color: "#f56565",
@@ -166,7 +205,7 @@ export const trendOptions = (echarts, rawData) => {
         data: deaths,
       },
       {
-        name: "Recovered",
+        name: "New Recovered",
         type: "line",
         smooth: true,
         color: "#48bb78",
